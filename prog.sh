@@ -17,3 +17,9 @@ for i in {1..3}; do
 done
 
 echo "Heads: $CNT_HEAD, Tails: $CNT_TAIL"
+
+if [ $CNT_HEAD -gt $CNT_TAIL ]; then
+  echo "You won!"
+else 
+  echo "You lost!"
+fi
