@@ -5,6 +5,10 @@ echo "Tossing a coin..."
 CNT_TAIL=0
 CNT_HEAD=0
 
+echo "Who are you?"
+read -p "> " NAME
+echo "Hello, $NAME!"
+
 for i in {1..3}; do
   if [ "$(shuf -i 0-1 -n 1)" == 0 ]; then
     COIN="Tails"
@@ -19,7 +23,7 @@ done
 echo "Heads: $CNT_HEAD, Tails: $CNT_TAIL"
 
 if [ $CNT_HEAD -gt $CNT_TAIL ]; then
-  echo "You won!"
+  echo "$NAME won!"
 else 
-  echo "You lost!"
+  echo "$NAME lost!"
 fi
